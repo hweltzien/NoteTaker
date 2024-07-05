@@ -16,6 +16,10 @@ by Heather Weltzien
     
 ## Usage
     Run node server.js in the terminal.
+<img src= "./images/screenshot1.png" alt="screenshot">
+<img src= "./images/screenshot2.png" alt="screenshot">
+
+# [link to completed project](https://notetaker-rkmu.onrender.com/notes)
     
 ## Credits
 <ul>    
@@ -26,5 +30,3 @@ by Heather Weltzien
 ## License
     none
 
-# [link to completed project](__________)
-    
