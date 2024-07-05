@@ -33,16 +33,18 @@ notes.post('/', (req, res) => {
   // DELETE Route for a current UX/UI note
 notes.delete('/:id', (req, res) => {
     console.log(req.body);
-    let noteId = req.params.id
-    let allNotes = []
-    readFromFile('./db/db.json').then((data) => allNotes = JSON.parse(data));
+    let noteId = req.params.id;
+    let allNotes = [];
+
+    readFromFile('./db/db.json').then((data) => {
+        allNotes = JSON.parse(data);
+
+        allNotes = allNotes.filter(note => note.id != noteId);
   
-   allNotes = allNotes.filter(note => note.id != noteId)
-  
-      fs.writeFileSync('./db/db.json', JSON.stringify(allNotes));
-      res.json(`Note deleted successfully`);
-    
-  });
+        fs.writeFileSync('./db/db.json', JSON.stringify(allNotes));
+        res.json(`Note deleted successfully`);
+    });
+});
 
 
 module.exports = notes;
