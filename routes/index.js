@@ -1,12 +1,12 @@
 const router = require('express').Router();
 
-// Import our modular routers for /tips and /feedback
+// Import  modular routers 
 const notesRouter = require('./notes');
 
-// TODO: import your diagnostics route
+// Import  diagnostics route
 
 router.use('/notes', notesRouter);
 
-// TODO: Initialize diagnostics route
+// Initialize diagnostics route
 
 module.exports = router;
